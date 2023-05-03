@@ -50,12 +50,9 @@ export function useChat() {
    * Sends a new message to the AI function and streams the response
    */
   const sendMessage = (message: string, chatHistory: Array<ChatMessage>) => {
-    console.log();
     setState("waiting");
     let chatContent = "";
-    // const newHistory = [
-    //   { role: "system", content: MODEL_INSTRUCTIONS },
-    //   { role: "user", content: message }];
+
     const chatHistoryToDisplay = [
       ...chatHistory,
       { role: "user", content: message } as const,
