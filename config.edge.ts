@@ -1,13 +1,14 @@
-import type { AppConfig } from "./lib/edge/types.ts";
 import { prompt } from "./prompts/movie-critic.ts";
 // import { prompt } from "./prompts/tour-guide.ts";
 
-export const config: AppConfig = {
+export const config = {
   // This should be set in an environment variable
   // See https://platform.openai.com/account/api-keys
   OPENAI_API_KEY:  import.meta.env.VITE_OPENAI_API_KEY ?? "",
   
   MODEL_INSTRUCTIONS: import.meta.env.VITE_MODEL_INSTRUCTIONS ?? "",
+
+  API_PATH: import.meta.env.VITE_API_URL ?? "",
 
   // The maximum number of message in the history to send to the API
   // You should also set this in the config.browser.ts file.

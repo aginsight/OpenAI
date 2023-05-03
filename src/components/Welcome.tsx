@@ -4,7 +4,6 @@ export const Welcome: React.FC = () => (
     <p>
       You can use me to create your own chat bot app. In this demo I am an
       expert in movie reviews, so feel free to ask me about <b>Movies!</b>
-    </p>
-   
+    </p>   
   </div>
 );
